@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function JardimPage() {
   return (
     <main className="garden-page">
       <div className="garden-header">
         <div className="garden-brand"><span>✳</span> quando me faltam palavras</div>
-        <a href="/" className="garden-link">Voltar</a>
+        <Link href="/" className="garden-link">Voltar</Link>
       </div>
       <section className="garden-intro">
         <p className="garden-eyebrow">SEU ESPAÇO DE PRESENÇA</p>
