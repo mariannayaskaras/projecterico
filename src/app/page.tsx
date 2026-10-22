@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import "./admin-nav.css";
 
 const moods = ["Em paz", "Cansada", "Ansiosa", "Triste"];
 const prayers = [
@@ -25,6 +27,7 @@ export default function Home() {
           {[{ label: "Hoje", icon: "◷" }, { label: "365 orações", icon: "▤" }, { label: "Meu jardim", icon: "❋" }, { label: "Caderno", icon: "□" }].map((item) => (
             <button key={item.label} className={active === item.label ? "nav-active" : ""} onClick={() => setActive(item.label)}><span>{item.icon}</span>{item.label}</button>
           ))}
+          <Link href="/admin" className="admin-nav-link"><span>⚙</span>Administração</Link>
         </nav>
         <div className="sidebar-spacer" />
         <button className="ai-link" onClick={() => setChatOpen(true)}><span>✦</span><div><b>Conversar</b><small>Um espaço seguro para você</small></div><i>↗</i></button>

@@ -1,0 +1,116 @@
+.admin-shell {
+  --admin-ink: #263a35;
+  --admin-deep: #2f5148;
+  --admin-muted: #77857e;
+  --admin-paper: #f5f4ef;
+  --admin-line: #dce2db;
+  --admin-accent: #c8755d;
+  min-height: 100vh;
+  padding: 0 clamp(20px, 6vw, 90px) 72px;
+  color: var(--admin-ink);
+  background: radial-gradient(circle at 75% 0, #fffdf4 0, transparent 34%), var(--admin-paper);
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.admin-topbar { display: flex; min-height: 82px; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--admin-line); }
+.admin-brand { display: flex; align-items: center; gap: 11px; color: var(--admin-deep); font: 11px/1.05 Arial, sans-serif; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; }
+.admin-brand > span:first-child { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; color: white; background: var(--admin-accent); font-size: 23px; }
+.admin-brand strong { display: block; color: var(--admin-accent); font: italic 16px Georgia, serif; letter-spacing: 0; text-transform: none; }
+.admin-topbar-actions { display: flex; align-items: center; gap: 24px; }
+.admin-area-label, .admin-eyebrow { color: var(--admin-accent); font: 700 9px Arial, sans-serif; letter-spacing: .16em; }
+.admin-back-link, .admin-logout { color: var(--admin-deep); font-size: 12px; text-decoration: none; }
+.admin-back-link span { margin-left: 5px; color: var(--admin-accent); }
+.admin-logout { padding: 8px 12px; border: 1px solid var(--admin-line); border-radius: 4px; background: transparent; cursor: pointer; }
+.admin-login-card { width: min(500px, 100%); margin: clamp(70px, 12vh, 130px) auto 0; padding: clamp(28px, 6vw, 54px); border: 1px solid var(--admin-line); border-radius: 8px; background: #fffefa; box-shadow: 0 18px 50px #263a350b; }
+.admin-eyebrow { margin: 0 0 12px; }
+.admin-login-card h1, .admin-heading h1 { margin: 0; color: var(--admin-deep); font: 500 clamp(36px, 6vw, 54px)/1 Fraunces, Georgia, serif; letter-spacing: -.035em; }
+.admin-login-card h1 em { color: #7d9588; font-style: normal; }
+.admin-intro { margin: 16px 0 28px; color: var(--admin-muted); font-size: 13px; line-height: 1.6; }
+.admin-login-form { display: grid; gap: 10px; }
+.admin-login-form label, .admin-field { color: var(--admin-deep); font-size: 11px; font-weight: 600; }
+.admin-login-form input, .admin-field input, .admin-field textarea, .admin-search input, .admin-sort select { width: 100%; border: 1px solid var(--admin-line); border-radius: 4px; outline-color: #91aa9a; color: var(--admin-ink); background: #fbfbf7; font: 12px 'DM Sans', Arial, sans-serif; }
+.admin-login-form input, .admin-field input { min-height: 42px; padding: 10px 12px; }
+.admin-login-footnote { margin: 18px 0 0; color: #9aa69f; font-size: 10px; text-align: center; }
+.admin-primary-button { display: inline-flex; min-height: 43px; align-items: center; justify-content: space-between; gap: 20px; padding: 11px 15px; border: 0; border-radius: 4px; color: white; background: var(--admin-deep); font: 600 11px 'DM Sans', Arial, sans-serif; cursor: pointer; transition: background .2s, transform .2s; }
+.admin-primary-button:hover { background: #3c685c; transform: translateY(-1px); }
+.admin-primary-button:disabled { opacity: .6; cursor: wait; transform: none; }
+.admin-primary-button span { color: #e09b81; font-size: 17px; }
+.admin-login-form .admin-primary-button { margin-top: 8px; }
+.admin-content { width: min(1080px, 100%); margin: 54px auto 0; }
+.admin-heading { display: flex; align-items: end; justify-content: space-between; gap: 22px; margin-bottom: 34px; }
+.admin-heading h1 { font-size: clamp(42px, 6vw, 58px); }
+.admin-heading > div > p:last-child { margin: 10px 0 0; color: var(--admin-muted); font-size: 13px; }
+.admin-new-button { flex-shrink: 0; }
+.admin-alert, .admin-notice { margin: 0 0 18px; padding: 12px 15px; border: 1px solid #e8c6b9; border-radius: 4px; color: #8d4e3d; background: #fff5ef; font-size: 12px; }
+.admin-notice { border-color: #cbdccf; color: #355c49; background: #f1f7ef; }
+.admin-editor, .admin-library { margin-bottom: 28px; padding: clamp(20px, 3.5vw, 32px); border: 1px solid var(--admin-line); border-radius: 7px; background: #fffefa; }
+.admin-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+.admin-section-heading .admin-eyebrow { margin-bottom: 8px; }
+.admin-section-heading h2 { margin: 0; color: var(--admin-deep); font: 500 27px/1.1 Fraunces, Georgia, serif; }
+.admin-count { display: inline-grid; min-width: 25px; height: 25px; margin-left: 5px; place-items: center; border-radius: 50%; color: #758a79; background: #e8eee7; font: 12px 'DM Sans', Arial, sans-serif; vertical-align: middle; }
+.admin-cancel { padding: 7px 0; border: 0; color: var(--admin-muted); background: transparent; font-size: 11px; cursor: pointer; }
+.admin-prayer-form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px 15px; }
+.admin-field { display: grid; align-content: start; gap: 7px; }
+.admin-field-wide { grid-column: 1 / -1; }
+.admin-optional, .admin-field small { color: #99a49d; font-size: 10px; font-weight: 400; }
+.admin-field input[type=number] { max-width: 100%; }
+.admin-field textarea { min-height: 150px; padding: 12px; resize: vertical; line-height: 1.55; }
+.admin-field input::placeholder, .admin-field textarea::placeholder, .admin-search input::placeholder { color: #a4ada6; }
+.admin-publish-toggle { display: flex; grid-column: span 2; align-items: center; gap: 10px; align-self: center; cursor: pointer; }
+.admin-publish-toggle input { width: 17px; height: 17px; accent-color: var(--admin-deep); }
+.admin-publish-toggle b, .admin-publish-toggle small { display: block; }
+.admin-publish-toggle b { color: var(--admin-deep); font-size: 11px; }
+.admin-publish-toggle small { margin-top: 3px; color: var(--admin-muted); font-size: 10px; }
+.admin-form-actions { display: flex; justify-content: end; align-items: center; }
+.admin-published-count { margin: 0 0 2px; color: var(--admin-muted); font-size: 11px; }
+.admin-toolbar { display: flex; justify-content: space-between; gap: 15px; margin: 0 0 8px; }
+.admin-search { position: relative; flex: 1; }
+.admin-search > span { position: absolute; top: 6px; left: 11px; color: #89978e; font-size: 22px; }
+.admin-search input { height: 39px; padding: 9px 12px 9px 36px; }
+.admin-sort { display: flex; align-items: center; gap: 8px; color: var(--admin-muted); font-size: 10px; white-space: nowrap; }
+.admin-sort select { width: auto; min-width: 145px; height: 39px; padding: 0 10px; }
+.admin-empty { display: grid; min-height: 170px; align-content: center; justify-items: center; gap: 8px; border-top: 1px solid var(--admin-line); color: var(--admin-deep); text-align: center; }
+.admin-empty > span { color: var(--admin-accent); font-size: 24px; }
+.admin-empty b { font: 500 19px Fraunces, Georgia, serif; }
+.admin-empty small { color: var(--admin-muted); font-size: 11px; }
+.admin-prayer-list { border-top: 1px solid var(--admin-line); }
+.admin-prayer-row { display: grid; grid-template-columns: 64px minmax(150px, 1fr) 92px 38px auto; gap: 15px; align-items: center; min-height: 76px; padding: 12px 4px; border-bottom: 1px solid var(--admin-line); }
+.admin-prayer-day { color: var(--admin-accent); font: 9px Arial, sans-serif; letter-spacing: .11em; }
+.admin-prayer-info { min-width: 0; }
+.admin-prayer-info h3 { overflow: hidden; margin: 0 0 5px; color: var(--admin-deep); font: 500 17px Fraunces, Georgia, serif; text-overflow: ellipsis; white-space: nowrap; }
+.admin-prayer-info p { overflow: hidden; margin: 0; color: var(--admin-muted); font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.admin-status { display: inline-flex; align-items: center; gap: 6px; color: #87938c; font-size: 10px; }
+.admin-status i { width: 6px; height: 6px; border-radius: 50%; background: #b7c0b9; }
+.admin-status.is-published { color: #537861; }
+.admin-status.is-published i { background: #6e9a79; }
+.admin-order { color: #9ca7a0; font: 10px Arial, sans-serif; }
+.admin-row-actions { display: flex; justify-content: end; gap: 12px; }
+.admin-row-actions button { padding: 5px 0; border: 0; color: var(--admin-deep); background: transparent; font-size: 10px; cursor: pointer; }
+.admin-row-actions button:hover { text-decoration: underline; }
+.admin-row-actions .admin-delete { color: #ad6350; }
+
+@media (max-width: 760px) {
+  .admin-shell { padding-right: 18px; padding-left: 18px; }
+  .admin-content { margin-top: 36px; }
+  .admin-heading { align-items: start; flex-direction: column; }
+  .admin-prayer-row { grid-template-columns: 55px minmax(0, 1fr) auto; gap: 8px 11px; }
+  .admin-status { grid-column: 2; grid-row: 2; }
+  .admin-order { display: none; }
+  .admin-row-actions { grid-column: 3; grid-row: 1 / span 2; flex-direction: column; gap: 7px; }
+}
+
+@media (max-width: 520px) {
+  .admin-topbar { min-height: 70px; }
+  .admin-area-label { display: none; }
+  .admin-topbar-actions { gap: 12px; }
+  .admin-back-link { font-size: 10px; }
+  .admin-logout { padding: 7px 9px; font-size: 10px; }
+  .admin-prayer-form { grid-template-columns: 1fr 1fr; }
+  .admin-field-wide { grid-column: 1 / -1; }
+  .admin-publish-toggle { grid-column: 1 / -1; }
+  .admin-form-actions { grid-column: 1 / -1; }
+  .admin-toolbar { align-items: stretch; flex-direction: column; }
+  .admin-sort { justify-content: space-between; }
+  .admin-sort select { flex: 1; }
+  .admin-section-heading h2 { font-size: 24px; }
+}

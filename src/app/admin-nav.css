@@ -1,0 +1,23 @@
+.product-nav .admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 12px 13px;
+  border-top: 1px solid var(--line);
+  color: #89948e;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.product-nav .admin-nav-link:hover {
+  color: var(--deep);
+  background: #e8eee7;
+}
+
+.product-nav .admin-nav-link span {
+  width: 18px;
+  color: #a07161;
+  font-size: 17px;
+  text-align: center;
+}
